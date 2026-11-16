@@ -1,11 +1,48 @@
-# Skill Picker plugin
+# Skill Picker
 
-This local Codex plugin exposes the installed skills under `%USERPROFILE%/.codex/skills` through a small stdio MCP server.
+A Codex plugin that discovers installed skills, shows their instructions, and builds prompts that invoke selected skills for a task.
 
-Tools:
+## Features
 
-- `list_skills`: list all skills, optionally filtered by a search phrase.
-- `get_skill`: read the metadata and instructions for one installed skill.
-- `build_skill_prompt`: create a prompt that invokes one or more skills for a concrete task.
+- `list_skills`: list installed skills, optionally filtered by a search phrase.
+- `get_skill`: inspect a skill's metadata and `SKILL.md` instructions.
+- `build_skill_prompt`: create a prompt for one or more skills and a concrete task.
 
-The server discovers skills on every tool call, so skills installed after the plugin are included without rebuilding it.
+The plugin reads skills from `%USERPROFILE%/.codex/skills` on Windows or `~/.codex/skills` on macOS and Linux. It discovers skills on each tool call, so newly installed skills appear without rebuilding the plugin. Python 3 must be available as `python` on `PATH` for the bundled stdio MCP server.
+
+## Install from Codex
+
+Add this repository as a plugin marketplace:
+
+```text
+/plugins
+```
+
+In the plugin marketplace UI, choose **Add marketplace**, then enter:
+
+```text
+https://github.com/zhuze580/skill-picker
+```
+
+Find **Skill Picker** in the marketplace and install it. Restart Codex if the plugin does not appear immediately.
+
+If your Codex version supports the CLI marketplace commands, you can also run:
+
+```bash
+codex plugin marketplace add zhuze580/skill-picker
+codex plugin install skill-picker@skill-picker-marketplace
+```
+
+## Local development
+
+The plugin package is in `plugins/skill-picker/`. The repository marketplace manifest is `.agents/plugins/marketplace.json`.
+
+To test the MCP server directly, run it with Python and send newline-delimited MCP JSON-RPC requests on standard input:
+
+```bash
+python plugins/skill-picker/server/skill_picker_mcp.py
+```
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE).

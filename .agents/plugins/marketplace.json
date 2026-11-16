@@ -1,0 +1,20 @@
+{
+  "name": "skill-picker-marketplace",
+  "interface": {
+    "displayName": "Skill Picker Marketplace"
+  },
+  "plugins": [
+    {
+      "name": "skill-picker",
+      "source": {
+        "source": "local",
+        "path": "./plugins/skill-picker"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
