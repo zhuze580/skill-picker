@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "skill-picker": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["${PLUGIN_ROOT}/server/skill_picker_mcp.py"],
+      "cwd": "${PLUGIN_ROOT}"
+    }
+  }
+}

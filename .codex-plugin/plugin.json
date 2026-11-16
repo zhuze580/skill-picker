@@ -1,0 +1,9 @@
+{
+  "name": "skill-picker",
+  "display_name": "Skill Picker",
+  "version": "0.1.0",
+  "description": "Discover installed Codex skills and build prompts that invoke one or more skills.",
+  "author": {
+    "name": "Local"
+  }
+}

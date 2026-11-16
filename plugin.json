@@ -1,0 +1,19 @@
+{
+  "name": "skill-picker",
+  "version": "0.1.0",
+  "description": "Discover installed Codex skills and build prompts that invoke one or more skills.",
+  "author": {
+    "name": "Local"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Skill Picker",
+    "shortDescription": "Find and combine installed skills",
+    "longDescription": "Browse installed Codex skills and compose an invocation prompt for one or more skills.",
+    "developerName": "Local",
+    "category": "Productivity",
+    "capabilities": ["Read"],
+    "brandColor": "#146B57",
+    "screenshots": []
+  }
+}
