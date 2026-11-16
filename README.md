@@ -37,6 +37,12 @@ codex plugin install skill-picker@skill-picker-marketplace
 
 The plugin package is in `plugins/skill-picker/`. The repository marketplace manifest is `.agents/plugins/marketplace.json`.
 
+The root-level `skills/skill-picker/SKILL.md` copy is included for Agent Skills indexes such as SkillsMP. The plugin package contains the same skill at `plugins/skill-picker/skills/skill-picker/SKILL.md`.
+
+## SkillsMP
+
+This public repository is formatted for SkillsMP indexing. Search for `skill-picker` on [SkillsMP](https://skillsmp.com/) after its next index update. Indexing is controlled by SkillsMP, so a new repository may take time to appear.
+
 To test the MCP server directly, run it with Python and send newline-delimited MCP JSON-RPC requests on standard input:
 
 ```bash
